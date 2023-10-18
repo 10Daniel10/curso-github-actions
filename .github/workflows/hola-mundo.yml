@@ -1,6 +1,8 @@
 name: hola-mundo #Nombre del workflow
 run-name: ¡Estoy aprendiendo Github Actions!
-on: [push] #evento que lo activará
+on:
+  push: #evento que lo activará
+    branches: [ "main" ]
 jobs:
   hola-mundo: #Nombre del job
     runs-on: ubuntu-latest #Imagen en la que correrá
