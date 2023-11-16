@@ -14,4 +14,4 @@ jobs:
       - name: Variables #Invocar variables
         run: |
                 export Nombre=${{vars.NOMBRE }}
-                echo "Hola $Nombre. Tu contraseña es ${{secrets.CONTRASENA}}"
+                echo "Hola $Nombre. Tu contraseña es... ${{secrets.CONTRASENA}}"
