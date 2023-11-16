@@ -12,6 +12,6 @@ jobs:
       - name: Correr Script #Nombre del 2er step
         run: python hola-mundo.py #Comando que se va ejecutar
       - name: Variables #Invocar variables
-        run: echo "Hola ${{vars.NOMBRE}}. Tu contraseña es ${{secrets.CONTRASENA}}"
-      - name: Variables #Invocar variables
-        run: echo "Hola ${{vars.NOMBRE}}. Tu contraseña es ${{secrets.OTHER}}"
+        run: |
+                export Nombre=${{vars.NOMBRE }}
+                echo "Hola $Nombre. Tu contraseña es ${{secrets.CONTRASENA}}"
